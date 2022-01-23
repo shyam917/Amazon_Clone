@@ -1,13 +1,13 @@
-import './App.css';
+import "./App.css";
 import React from "react";
+import Header from "./Header";
 function App() {
-
   return (
     //BEM
     <div className="App">
-   <h1>MY PROGRAM </h1>
-   {/* HEADER */}
-   {/*HOME */}
+      <Header />
+      {/* HEADER */}
+      {/*HOME */}
     </div>
   );
 }
