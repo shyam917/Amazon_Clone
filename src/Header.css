@@ -35,6 +35,25 @@
   background-color: #cd9042;
 }
 
+.header__optionLineOne{
+  font-size: 10px;
+}
+
+.header__optionLineTwo{
+font-weight: 800;
+  font-size: 13px;
+}
+.header__optionCart{
+  display: flex;
+  align-items: center;
+  color: white;  
+}
+
+.header__CartCount{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 .header__nav{
   display: flex;
   justify-content: space-evenly;
@@ -45,6 +64,5 @@
   flex-direction: column;
   margin-left: 10px;
   margin-right: 10px;
-  color: white;
-  
+  color: white;  
 }
