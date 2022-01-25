@@ -15,9 +15,9 @@ function Product() {
                     <p>⭐</p>
                 </div>
             </div>
-
+            <img src="https://m.media-amazon.com/images/I/81RCff1NpnL._AC_UY218_.jpg" alt="" />
+            <button>Add to Cart</button>
         </div>
-        <img src="" alt="" />
     </div>);
 }
 
