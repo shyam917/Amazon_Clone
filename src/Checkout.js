@@ -1,6 +1,9 @@
 import { Divider } from '@material-ui/core';
 import React from 'react';
 import "./Checkout.css";
+import Subtotal from './Subtotal';
+
+
 
 function Checkout() {
   return( 
@@ -11,8 +14,9 @@ function Checkout() {
             <h2 className='checkout__title'>your shopping cart</h2>
           </div>
       </div>
+      
       <div className='checkout__right'>
-        <h2>subtotal</h2>
+        <Subtotal />
       </div>
   </div>
   );
