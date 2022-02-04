@@ -1,6 +1,21 @@
 import React from 'react';
 import "./Product.css";
 function Product({id,title, image, price, rating }) {
+    const[cart, dispatch] = useStatevalue();
+    console.log('cart', cart);
+    const addTocart = () => {
+        //dispatch
+        dispatch({
+            type: 'ADD_TO_CART',
+            item: {
+                id: id,
+                title: title,
+                image: image,
+                price: price,
+                rating: rating,
+            },
+        });
+    }
     return <div className='product'>
         <div className='product__Info'>
             <p>{title}</p>
@@ -13,7 +28,7 @@ function Product({id,title, image, price, rating }) {
             </div>
         </div>
         <img src={image} alt="" />
-        <button>Add to Cart</button>
+        <button onClick={addTocart}>Add to Cart</button>
     </div>;
 }
 
