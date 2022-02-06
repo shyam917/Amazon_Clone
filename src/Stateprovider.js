@@ -1,4 +1,4 @@
-import React, { createContext, usecontext, useReducer } from 'react';
+import React, { createContext, useContext, useReducer } from 'react';
 
 
 //Prepare data layer
@@ -12,4 +12,5 @@ export const StateProvider = ({ reducer, initialState, children }) => (
 );
 
 // Pull information from the data layer
-export const useStateValue = () => usecontext(StateContext);
+export const useStateValue = () => useContext(StateContext);
+ 

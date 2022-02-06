@@ -1,7 +1,8 @@
 import React from 'react';
 import "./Product.css";
+import { useStateValue } from './Stateprovider';
 function Product({id,title, image, price, rating }) {
-    const[cart, dispatch] = useStatevalue();
+    const[{cart}, dispatch] = useStateValue();
     console.log('cart', cart);
     const addTocart = () => {
         //dispatch
