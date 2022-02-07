@@ -11,7 +11,7 @@ function Checkout() {
       <div className='checkout__left'>
           <img className='checkout__ad' src='https://images-eu.ssl-images-amazon.com/images/G/31/img18/Fresh/Promotions/January/BankOffers/JAN21/3_pc.jpg'/>
           <div >
-            <h2 className='checkout__title'>your shopping cart</h2>
+            <h2 className='checkout__title'>Your Shopping Cart</h2>
           </div>
       </div>
       

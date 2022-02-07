@@ -20,7 +20,7 @@ function Subtotal() {
                     </>
                 )}
                 decimalScale={2}
-                value={getCartTotal}
+                value={getCartTotal(cart)}
                 displayType={"text"}
                 thousandSeparator={true}
                 prefix={"₹"}
