@@ -1,11 +1,34 @@
 import "./App.css";
-import React from "react";
+import React,{useEffect} from "react";
 import Header from "./Header";
 import Home from "./Home";
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Checkout from "./Checkout";
 import Login from "./Login";
+import {auth} from './firebase';
+import { useStateValue } from "./Stateprovider";
+
 function App() {
+  const [{user}, dispatch] = useStateValue();
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged(authUser => {
+      if(authUser) {
+        dispatch({
+          type: "SET_USER",
+          user: authUser
+        })
+      } else {
+        dispatch({
+          type: "SET_USER",
+          user: null
+        })
+      }
+    })
+    return () => {
+      unsubscribe();
+    }
+  }, [])
+  
   return (
     //BEM
     <Router>
@@ -26,6 +49,7 @@ function App() {
       </div>
     </Router>
   );
+  
 }
 
 export default App;
